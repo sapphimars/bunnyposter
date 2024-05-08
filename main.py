@@ -1,6 +1,8 @@
 from instagrapi import Client
 import tweepy
 import tweepy.client
+import pinterest
+
 from dotenv import load_dotenv
 import os
 import asyncio
@@ -57,6 +59,13 @@ async def postToX(X_CREDS, myPath, myCaption):
 
 
     x_cl.create_tweet(text = myCaption, media_ids=[x_mediaID])
+
+
+
+#----------PINTEREST-----------------------------
+async def postToPinterest(PINTEREST_CREDS, myPath, myCaption):
+    
+
 
 #asyncio.run(postToX(X_CREDS, myPath, myCaption))
 #asyncio.run(postToInstagram(IG_CREDS, myPath, myCaption))
